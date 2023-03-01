@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0890a76fa0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body onload="loadCatagory()" class="bg-red-50">
+    <header class="px-12 w-full md:w-[90%] mx-auto  bg-violet-300 ">
+        <!-- navbar -->
+        <div class="navbar  bg-violet-300">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl">News Portal</a>
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="./girl.jpg" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>   
+    </header>
+    <!-- horizontal part -->
+    <div class=" px-12 w-full md:w-[90%] mx-auto bg-slate-300 mt-8">
+        <hr> 
+    </div>
+    <!-- catagory list div -->
+     <div class="px-12  md:flex justify-between w-full md:w-[90%] mx-auto mt-8" id="ul-list">
+        <!-- catagory list append -->
+    </div>
+    <!-- alert -->
+    <div class="alert bg-slate-100 shadow-lg px-12 flex justify-between w-full md:w-[90%] mx-auto mt-8">
+        <div>
+          <h2 id="no"></h2>
+        </div>
+      </div>
+
+    <!-- sort by -->
+    <div class="w-full md:w-[90%] mx-auto mt-8 flex justify-between">
+        <div class=" w-full md:w-[90%] flex gap-2 items-center">
+            <h2 class="text-lg font-bold">Sort By View</h2>
+            <select class="select bg-violet-300 text-white w-full md:w-[100px]" id="select" onchange="select()">
+                <option disabled selected>Default</option>
+                <option>Ascending</option>
+                <option>Decending</option>
+         
+              </select>
+            </div>
+            <div class="flex gap-2 items-center">
+                <button class="btn btn-outline btn-primary" id="new" onclick="news()">New</button>
+                <button class="btn btn-outline btn-secondary" id="trending" onclick="trending()">Trending</button>
+            </div>
+    </div>
+    <!-- card details -->
+    <div class="w-full md:w-[90%] mx-auto mt-8" id="card">
+        <!-- card append -->
+    </div>
+
+    <!-- modal -->
+    <!-- The button to open modal -->
+<!-- <label for="my-modal-5" class="btn">open modal</label> -->
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-5" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box w-2/5 bg-lime-200 max-w-5xl">
+    <img src="./girl.jpg" class="w-[400px] p-4 " id="image" alt="">
+    <h3 class="font-bold text-lg" id="title"></h3>
+    <p class="py-4" ><span id="details"> </span>.........<br><span class="badge badge-lg p-4 bg-blue-500" id="badge">p</span></p>
+
+    <div class="modal-action">
+      <label for="my-modal-5" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="bg-[url('./girl.jpg')] h-[500px] bg-cover">
+
+</div> -->
+  
+ <script src="./index.js"></script>
+</body>
+</html>
